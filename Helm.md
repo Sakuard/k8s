@@ -26,8 +26,8 @@ helm install mymaria bitnami/mariadb
 ```
 Hosting numbers of service with Kubernetes will make you feel yourself as a YAML-Engineer
 
-<!-- ![YAML-Engineer](https://hackmd.io/_uploads/HJhAxxl8R.jpg) -->
-![YAML-Engineer](./src/YAML-Engineer.png)
+<!-- ![YAML-Engineer](./src/YAML-Engineer.png) -->
+![YAML-Engineer](./src/helm/YAML-Engineer.png)
 
 ### And Helm deal with the following problem good
 1. YAML files management
@@ -36,20 +36,20 @@ Hosting numbers of service with Kubernetes will make you feel yourself as a YAML
 ---
 - Kubernetes vs Helm
 
-<!-- ![K8s vs Helm](https://hackmd.io/_uploads/BkPhLCkIA.png) -->
-![K8s vs Helm](./src/K8S%20vs%20Helm.png)
+<!-- ![K8s vs Helm](./src/K8S%20vs%20Helm.png) -->
+![K8s vs Helm](./src/helm/K8S%20vs%20Helm.png)
 - How Helm works
 
-<!-- ![Helm to K8s](https://hackmd.io/_uploads/SJnBI-gIC.png) -->
-![Helm to K8s](./src/Helm%20to%20K8S.png)
+<!-- ![Helm to K8s](./src/Helm%20to%20K8S.png) -->
+![Helm to K8s](./src/helm/Helm%20to%20K8S.png)
 
 
 ### Helm Charts
 Helm packages are refferred to as **charts** - deployable units for Kubernetes-bound applications.
 
 Charts are comprised of a collection of files (mostly YAML) at well-known locations.
-<!-- ![Helm-Chart](https://hackmd.io/_uploads/BJcoZa0BR.png) -->
-![Helm-Chart](./src/Helm-Chart.png)
+<!-- ![Helm-Chart](./src/Helm-Chart.png) -->
+![Helm-Chart](./src/helm/Helm-Chart.png)
 ```bash=
 # helm will generate a typical chart layout
 helm create demo
@@ -157,8 +157,8 @@ metadata:
 
 ### Helm Operate
 - Install
-<!-- ![Helm-install](https://hackmd.io/_uploads/ByUpUaCSC.png) -->
-![Helm-install](./src/Helm-install.png)
+<!-- ![Helm-install](./src/Helm-install.png) -->
+![Helm-install](./src/helm/Helm-install.png)
 
 ```bash=
 # From a chart directory:
