@@ -54,7 +54,7 @@ Login with admin
 ![Argo-Login](https://hackmd.io/_uploads/SyQ1a_MIA.png)
 
 ### Deploy setup
-[argo-demo](./src/argo/argo-demo.gif)
+![argo-demo](./src/argo/argo-demo.gif)
 
 
 ![image](https://hackmd.io/_uploads/SJVSZIG8C.png)
