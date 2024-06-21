@@ -21,10 +21,12 @@ deploy:
 kubectl get all
 ```
 #### ArgoCD handle these with a UI friendly interface
-![Argo-UI](https://hackmd.io/_uploads/BJu1swG8R.png)
+<!-- ![Argo-UI](https://hackmd.io/_uploads/BJu1swG8R.png) -->
+![Argo-UI](https://github.com/Sakuard/k8s/blob/main/src/argo/Argo-UI.png)
 
 ### GitLab-Agent vs ArgoCD
-![Agenv-Argo](https://hackmd.io/_uploads/SJG3GdML0.png)
+<!-- ![Agent-Argo](https://hackmd.io/_uploads/SJG3GdML0.png) -->
+![Agent-Argo](https://github.com/Sakuard/k8s/blob/main/src/argo/Agent-Argo.png)
 ### Deploy with ArgoCD
 1. install ArgoCD in kubernetes cluster
 2. Login ArgoCD
@@ -51,10 +53,11 @@ spec:
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode; echo
 ```
 Login with admin
-![Argo-Login](https://hackmd.io/_uploads/SyQ1a_MIA.png)
+<!-- ![Argo-Login](https://hackmd.io/_uploads/SyQ1a_MIA.png) -->
+![Argo-Login](https://github.com/Sakuard/k8s/blob/main/src/argo/Argo-Login.png)
 
 ### Deploy setup
-![argo-demo](./src/argo/argo-demo.gif)
+![argo-demo](https://github.com/Sakuard/k8s/blob/main/src/argo/argo-demo.gif)
 
 
-![image](https://hackmd.io/_uploads/SJVSZIG8C.png)
+<!-- ![image](https://hackmd.io/_uploads/SJVSZIG8C.png) -->
