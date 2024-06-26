@@ -20,6 +20,7 @@ deploy:
 # deployment status check
 kubectl get all
 ```
+
 #### ArgoCD handle these with a UI friendly interface
 <!-- ![Argo-UI](https://hackmd.io/_uploads/BJu1swG8R.png) -->
 ![Argo-UI](https://github.com/Sakuard/k8s/blob/main/src/argo/Argo-UI.png)

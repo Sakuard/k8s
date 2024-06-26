@@ -307,7 +307,7 @@ spec:
 - helm upgrade
     - ----timeout : 超時
     ```bash=
-    helm upgrade myrelease ./mychart --timeout 10m
+    helm upgrade myrelease ./mychart --timeout 10m (default value)
     ```
     - ----reuse-values : 重用上次部署的值
     ```bash=
@@ -326,16 +326,41 @@ spec:
     helm upgrade myrelease ./mychart --dry-run -f myvals.yaml
     ```
     - ----atomic : 若 upgrade 失敗，rollback
+    (which situation will upgrade failed)
     ```bash=
     helm upgrade myrelease ./mychart --atomic -f myvals.yaml
     ```
 - helm list : 所有 release 列表
 - helm get : 取得已安裝的 release detail
+(helm get , flag)
 ```bash=
 helm get all myrelease
 ```
 <br/>
 
+### Helm take charge of service deployed by kubectl 
+```bash=
+# deployment
+kubectl annotate deployment <deployment-name> meta.helm.sh/release-name=<release-name> --overwrite
+kubectl annotate deployment <deployment-name> meta.helm.sh/release-namespace=<namespace> --overwrite
+kubectl label deployment <deployment-name> app.kubernetes.io/managed-by=Helm --overwrite
+
+# service
+kubectl annotate service <service-name> meta.helm.sh/release-name=<release-name> --overwrite
+kubectl annotate service <service-name> meta.helm.sh/release-namespace=<namespace> --overwrite
+kubectl label service <service-name> app.kubernetes.io/managed-by=Helm --overwrite
+
+@ configMap
+kubectl annotate configmap <configmap-name> meta.helm.sh/release-name=<release-name> --overwrite
+kubectl annotate configmap <configmap-name> meta.helm.sh/release-namespace=<namespace> --overwrite
+kubectl label configmap <configmap-name> app.kubernetes.io/managed-by=Helm --overwrite
+
+# HPA
+kubectl annotate hpa <hpa-name> meta.helm.sh/release-name=<release-name> --overwrite
+kubectl annotate hpa <hpa-name> meta.helm.sh/release-namespace=<namespace> --overwrite
+kubectl label hpa <hpa-name> app.kubernetes.io/managed-by=Helm --overwrite
+
+```
 
 ### Ref:
 ---
@@ -352,3 +377,6 @@ helm plugin install https://github.com/databus23/helm-diff
     - [Helm Management Guide](https://docs.couchbase.com/operator/current/helm-managing-guide.html)
 
 [Back](#home)
+
+docker image --set
+kubectl deploy >> helm 接手
