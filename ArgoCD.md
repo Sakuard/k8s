@@ -35,7 +35,10 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 ![Argo-Login](https://github.com/Sakuard/k8s/blob/main/src/argo/Argo-Login.png)
 
 ### :heavy_check_mark: Deploy setup
+- Repo Connect Setup <br/>:point_right: :gear:Settings > Repository > Connect REPO
+    - repo url
+    - user
+    - user-pass
+- Add up service CD setup
+
 ![argo-demo](https://github.com/Sakuard/k8s/blob/main/src/argo/argo-demo.gif)
-
-
-<!-- ![image](https://hackmd.io/_uploads/SJVSZIG8C.png) -->
