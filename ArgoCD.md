@@ -16,18 +16,17 @@
 # install ArgoCD
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
-# edit ArgoCD-svc
-kubectl edit svc argocd-server -n argocd
 ```
 ###  :heavy_check_mark: Login ArgoCD
 1. Set ArgoCD-Server into LoadBalancer
-2. Get init admin password
 ```yaml=
+# edit ArgoCD-svc
+kubectl edit svc argocd-server -n argocd
 # update `sepc.type` to LoadBalancer
 spec:
   type: LoadBalancer
 ```
+2. Get init admin password
 ```bash=
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode; echo
 ```
